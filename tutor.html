@@ -1,0 +1,443 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tutor
+{% endblock %}
+
+{% block main %}
+    <form action="/tutor" method="post">
+        <h3>Please select all grade levels you are willing to teach</h3>
+        <div class="form-group">
+            <input type="checkbox" id="kindergarten" name="kindergarten" value="kindergarten">
+            <label for="kindergarten"> Kindergarten</label><br>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="first" name="first" value="first">
+            <label for="first"> 1st</label><br>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="second" name="second" value="second">
+            <label for="second">2nd</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="third" name="third" value="third">
+            <label for="third">3rd</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="fourth" name="fourth" value="fourth">
+            <label for="fourth">4th</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="fifth" name="fifth" value="fifth">
+            <label for="fifth">5th</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="sixth" name="sixth" value="sixth">
+            <label for="sixth">6th</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="seventh" name="seventh" value="seventh">
+            <label for="seventh">7th</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="eighth" name="eighth" value="eighth">
+            <label for="eighth">8th</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="ninth" name="ninth" value="ninth">
+            <label for="ninth">9th</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="tenth" name="tenth" value="tenth">
+            <label for="tenth">10th</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="eleventh" name="eleventh" value="eleventh">
+            <label for="eleventh">11th</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="twelfth" name="twelfth" value="twelfth">
+            <label for="twelfth">12th</label>
+        </div>
+
+        <br><br>
+
+        <h3>Please select all subjects you are willing to teach</h3>
+        <div class="form-group">
+            <input type="checkbox" id="english" name="english" value="english">
+            <label for="english"> English</label><br>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="history" name="history" value="history">
+            <label for="history"> History</label><br>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="math" name="math" value="math">
+            <label for="math">Math</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="chemistry" name="chemistry" value="chemistry">
+            <label for="chemistry">Chemistry</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="physics" name="physics" value="physics">
+            <label for="physics">Physics</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="biology" name="biology" value="biology">
+            <label for="fifth">Biology</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="french" name="french" value="french">
+            <label for="french">French</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="spanish" name="spanish" value="spanish">
+            <label for="spanish">Spanish</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="music" name="music" value="music">
+            <label for="music">Music</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="compsci" name="compsci" value="compsci">
+            <label for="compsci">Computer Science</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="other" name="other" value="other">
+            <label for="other">Other</label>
+        </div>
+
+        <br><br>
+
+        <h3 style="text-align:center">Finally, input in all the time slots that you are available to teach </h3>
+        <div style="text-align:center">
+            <table style="border: 1px black">
+                <tr style="text-align:center;">
+                    <th style="background-color:gray">Monday</th>
+                    <th style="background-color:gray">Tuesday</th>
+                    <th style="background-color:gray">Wednesday</th>
+                    <th style="background-color:gray">Thursday</th>
+                    <th style="background-color:gray">Friday</th>
+                    <th style="background-color:gray">Saturday</th>
+                    <th style="background-color:gray">Sunday</th>
+                </tr>
+                <tr style="border: 1px;">
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8M" name="v_8M" value="v_8M">
+                            <label for="v_8M">8:00A-10:00A</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8T" name="v_8T" value="v_8T">
+                            <label for="v_8T">8:00A-10:00A</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8W" name="v_8W" value="v_8W">
+                            <label for="v_8W">8:00A-10:00A</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8R" name="v_8R" value="v_8R">
+                            <label for="v_8R">8:00A-10:00A</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8F" name="v_8F" value="v_8F">
+                            <label for="v_8F">8:00A-10:00A</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8S" name="v_8S" value="v_8S">
+                            <label for="v_8S">8:00A-10:00A</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8U" name="v_8U" value="v_8U">
+                            <label for="v_8U">8:00A-10:00A</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_10M" name="v_10M" value="v_10M">
+                            <label for="v_10M">10:00A-12:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_10T" name="v_10T" value="v_10T">
+                            <label for="v_10T">10:00A-12:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_10W" name="v_10W" value="v_10W">
+                            <label for="v_10W">10:00A-12:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_10R" name="v_10R" value="v_10R">
+                            <label for="v_10R">10:00A-12:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_10F" name="v_10F" value="v_10F">
+                            <label for="v_10F">10:00A-12:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_10S" name="v_10S" value="v_10S">
+                            <label for="v_10S">10:00A-12:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_10U" name="v_10U" value="v_10U">
+                            <label for="v_10U">10:00A-12:00P</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_12M" name="v_12M" value="v_12M">
+                            <label for="v_12M">12:00P-2:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_12T" name="v_12T" value="v_12T">
+                            <label for="v_12T">12:00P-2:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_12W" name="v_12W" value="v_12W">
+                            <label for="v_12W">12:00P-2:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_12R" name="v_12R" value="v_12R">
+                            <label for="v_12R">12:00P-2:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_12F" name="v_12F" value="v_12F">
+                            <label for="v_12F">12:00P-2:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_12S" name="v_12S" value="v_12S">
+                            <label for="v_12S">12:00P-2:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_12U" name="v_12U" value="v_12U">
+                            <label for="v_12U">12:00P-2:00P</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_2M" name="v_2M" value="v_2M">
+                            <label for="v_2M">2:00P-4:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_2T" name="v_2T" value="v_2T">
+                            <label for="v_2T">2:00P-4:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_2W" name="v_2W" value="v_2W">
+                            <label for="v_2W">2:00P-4:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_2R" name="v_2R" value="v_2R">
+                            <label for="v_2R">2:00P-4:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_2F" name="v_2F" value="v_2F">
+                            <label for="v_2F">2:00P-4:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_2S" name="v_2S" value="v_2S">
+                            <label for="v_2S">2:00P-4:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_2U" name="v_2U" value="v_2U">
+                            <label for="v_2U">2:00P-4:00P</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_4M" name="v_4M" value="v_4M">
+                            <label for="v_4M">4:00P-6:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_4T" name="v_4T" value="v_4T">
+                            <label for="v_4T">4:00P-6:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_4W" name="v_4W" value="v_4W">
+                            <label for="v_4W">4:00P-6:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_4R" name="v_4R" value="v_4R">
+                            <label for="v_4R">4:00P-6:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_4F" name="v_4F" value="v_4F">
+                            <label for="v_4F">4:00P-6:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_4S" name="v_4S" value="v_4S">
+                            <label for="v_4S">4:00P-6:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_4U" name="v_4U" value="v_4U">
+                            <label for="v_4U">4:00P-6:00P</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_6M" name="v_6M" value="v_6M">
+                            <label for="v_6M">6:00P-8:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_6T" name="v_6T" value="v_6T">
+                            <label for="v_6T">6:00P-8:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_6W" name="v_6W" value="v_6W">
+                            <label for="v_6W">6:00P-8:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_6R" name="v_6R" value="v_6R">
+                            <label for="v_6R">6:00P-8:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_6F" name="v_6F" value="v_6F">
+                            <label for="v_6F">6:00P-8:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_6S" name="v_6S" value="v_6S">
+                            <label for="v_6S">6:00P-8:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_6U" name="v_6U" value="v_6U">
+                            <label for="v_6U">6:00P-8:00P</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8NM" name="v_8NM" value="v_8NM">
+                            <label for="v_8NM">8:00P-10:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8NT" name="v_8NT" value="v_8NT">
+                            <label for="v_8NT">8:00P-10:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8NW" name="v_8NW" value="v_8NW">
+                            <label for="v_8NW">8:00P-10:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8NR" name="v_8NR" value="v_8NR">
+                            <label for="v_8NR">8:00P-10:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8NF" name="v_8NF" value="v_8NF">
+                            <label for="v_8NF">8:00P-10:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8NS" name="v_8NS" value="v_8NS">
+                            <label for="v_8NS">8:00P-10:00P</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <input type="checkbox" id="v_8NU" name="v_8NU" value="v_8NU">
+                            <label for="v_8NU">8:00P-10:00P</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

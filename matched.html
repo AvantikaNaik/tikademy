@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Match
+{% endblock %}
+
+{% block main %}
+    <h3>You currently have {{ match_count }} matches</h3>
+    {% if match_count > 0 %}
+        <p>Your matches and their emails are here:</p>
+        {% for match in matchdata %}
+            <p>Name: {{ match[0] }}     Email: {{ match[1] }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

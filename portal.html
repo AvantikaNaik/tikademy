@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portal
+{% endblock %}
+
+{% block main %}
+<h1>Welcome to your homepage, {{ name }}</h1>
+<h3>Here's how to use the site:</h3>
+<p>This site was purposely designed so that you can be both a tutor and a student! Just input your timings and subjects for whichever service you require and let the website do the rest!</p>
+<h3>One quick note:</h3>
+<p>If your schedule changes, just resubmit the tutoring form! Your information will be updated right away!</p>
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Do I want to tutor others?
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+          If you wish to tutor others, head to the tutor page by clicking on the "tutor" link in the header! Once you're there, input which grade levels and subjects you are willing to teach, as well as when you are available to tutor. Once you have submitted your schedule and
+           areas of expertise, all you have to do is wait! The algorithm will match you to students who fit your criteria!
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Am I looking for a tutor?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+          You've come to the right place! Just click on the "student" link in the header to be directed to the student page. Once you are there, fill out the form based off your grade, subject, and schedule. The website will do the rest!
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          How does the website match?
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+          Tikademy uses a very complex algorithm to match you based off three main factors: Grade levels, subject, scheduling. Certain factors are kept constant while others are variable to change. We try to find the best match based off
+          who has signed up. Occasionally, we will have to refer you some matches that don't completely fit the criteria, but you might find out that this is actually beneficial!
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

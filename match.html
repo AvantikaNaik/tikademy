@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Match
+{% endblock %}
+
+{% block main %}
+    <form action="/match" method="post">
+        <h3>Are you willing to share your contact information?</h3>
+        <div class="form-group">
+            <input type="checkbox" required id="yes" name="yes" value="yes">
+            <label for="yes">Yes, I consent to sharing my contact info</label><br>
+        </div>
+        <h3>Are you a tutor or a student?</h3>
+        <div class="form-group">
+            <input type="radio"  id="tutor" name="role" value="tutor">
+            <label for="tutor">Tutor</label><br>
+            <input type="radio"  id="student" name="role" value="student">
+            <label for="student">Student</label><br>
+        </div>
+        <button class="btn btn-primary" type="submit">Get My Matches</button>
+    </form>
+{% endblock %}
